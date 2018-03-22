@@ -22,7 +22,7 @@ Choix 1 : Mettre le fichier dist en prod
 Choix 2 : 
 - Installer node.js 
 - récupérer les sources 
-- exécuter la commande npm install pour gérer les 
+- exécuter la commande npm install pour gérer les dépendances
 - exécuter ng serve --open pour lancer le serveur node et afficher la single page application
 
 
