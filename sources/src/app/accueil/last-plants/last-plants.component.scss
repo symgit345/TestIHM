@@ -1,0 +1,92 @@
+.last-unicorns {
+     margin-bottom: 70px;
+     padding-top: 70px;
+     text-align: center;
+     img {
+        width: 65%;
+     }
+     .unicorn-card {
+         text-align: center;
+         .unicorn-card-detail {
+             background: #d1eeeb;
+             border-radius: 15px;
+             display: block;
+             margin: 0 auto;
+             img {
+                 width: 80%;
+                 margin-top: 15px;
+                 margin-bottom: 25px;
+            }
+             .price-zone {
+                 padding-top: 15px;
+                 img {
+                     width: 15px;
+                     margin: 0 12px 0 0;
+                     vertical-align: baseline;
+                }
+                 p {
+                     margin: 0;
+                     padding: 5px 20px;
+                     background-color: #e8f7f5;
+                     border-radius: 30px;
+                     font-size:0.5rem;
+                     display: inline-block;
+                }
+                 .price:after {
+                     content: '';
+                     position: absolute;
+                     left: 46%;
+                     top: 47px;
+                     width: 0;
+                     height: 0;
+                     border-left: 10px solid transparent;
+                     border-right: 10px solid transparent;
+                     border-top: 10px solid #e8f7f5;
+                     clear: both;
+                }
+            }
+        }
+         .name {
+             font-size: 0.6rem;
+             font-weight:bold;
+             text-align: left;
+        }
+    }
+}
+ .detailproject {
+     margin-top:20px;
+     background: #f8f8f8;
+     border-top: 1px solid darkgray;
+     box-shadow: inset 0px 11px 8px -10px darkgray, inset 0px -11px 8px -10px darkgray;
+}
+ .explications {
+     p {
+         color: #5e5e5e;
+         font-size:0.6rem;
+         padding-left: 20px;
+         padding-top: 35px;
+    }
+     img {
+         margin-top: 10px;
+         width: 100%;
+         margin-bottom:5px;
+    }
+     .textdetail {
+         margin-top: 75px;
+    }
+}
+ .ak-btn-big:hover, .ak-btn-big:focus {
+     background: linear-gradient(to bottom, #fbec95 1%, #fce874 7%, #fcdd10 14%, #f8b50c 41%, #f8b50c 52%, #f8b50c 88%, #fcdd10 99%);
+}
+ .ak-btn-big {
+     text-align: center;
+     box-shadow: 0 1px 2px 0 #000000;
+     border: 1px solid orange;
+     background: linear-gradient(to bottom, #f7e199 1%, #f9db77 7%, #fac612 14%, #f19e12 41%, #f19e12 52%, #f19e12 88%, #fac612 99%);
+     color: white!important;
+     font-weight:bold;
+     font-size: 0.5rem;
+     display:block;
+     width: 25%;
+     margin: 0 auto;
+}

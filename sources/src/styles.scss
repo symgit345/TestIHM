@@ -1,0 +1,9 @@
+.no-margin {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 21px;
+	font-family: 'Questrial', sans-serif;
+}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";

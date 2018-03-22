@@ -1,0 +1,35 @@
+<nav class="nav">
+    <div class="first-nav">
+        <div>
+            <img src="./assets/images/plante2.png">
+        </div>
+        <div *ngIf="isLogged != true">
+            <a class="nav-item" routerLink="/login">Connexion<img src="./assets/images/login.png"></a>
+            <a class="nav-item" routerLink="/register">Inscription<img src="./assets/images/registration.png"></a>
+        </div>
+        <div *ngIf="isLogged == true" class="activeFirstNav">
+            <span>{{userName}} : </span>
+            <a routerLink="/login">{{userCoins}} <img src="./assets/images/unicoin.png"></a>
+            <span (click)="disconnectUser()">Déconnexion</span>
+        </div>
+    </div>
+    <div class="second-nav">
+        <ul class="navbar">
+            <li>
+                <a class="" routerLink="/home" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+            </li>
+
+            <li>
+                <a class="" routerLink="/market/1"  routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}">Liste Plantes</a>
+            </li>
+            <li>
+                <a *ngIf="isLogged == true ;else other_content" class="" routerLink="/membership"  routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}">
+                Mon compte
+                </a>
+                <ng-template #other_content>
+                    <a class="" routerLink="/login"  routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}">Connexion </a>
+                </ng-template>
+            </li>
+        </ul>
+    </div>
+</nav>

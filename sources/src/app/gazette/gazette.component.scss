@@ -1,0 +1,183 @@
+.card-list {
+     .logo {
+         width: 50%;
+         padding-top: 20px;
+    }
+     margin-top: 25px;
+     text-align: center;
+     .clearfix {
+         clear: both;
+    }
+     .menu {
+         padding: 0 40px;
+         border-bottom: 2px solid #F3F1EE;
+         margin-bottom: 35px;
+         p {
+             float: right;
+             margin: 0;
+             padding:0 ;
+             font-weight: bold;
+             font-size: 0.6rem;
+             padding: 8px 12px;
+             border-radius: 15px;
+             background:#F3F1EE;
+             margin-bottom: 10px;
+             span {
+                 color: gray;
+            }
+        }
+         p:first-child {
+             display:inline-block;
+             float: left;
+        }
+    }
+     .unicorn-card-detail {
+         background: #d1eeeb;
+         border-radius: 15px;
+         display: block;
+         margin: 0 auto;
+         border: 2px solid white;
+         -webkit-transition: all .15s ease-in-out;
+         -o-transition: all .15s ease-in-out;
+         transition: all .15s ease-in-out;
+         img {
+             width: 80%;
+             margin-top: 5px;
+             margin-bottom: 15px;
+        }
+         .flexZone {
+             display: flex;
+             padding: 5px 18px 20px;
+             justify-content: space-between;
+             .btns {
+                 font-size: 0.7rem;
+                 color: white;
+                 font-weight: bold;
+                 display:inline-block;
+                 width: 40%;
+                 padding: 8px 4px;
+                 border-radius: 5px;
+                 background: #FBA371;
+                 border: 2px solid #0b0b0b;
+                 box-shadow: inset 0 0 0 3px #FF844B;
+                 &:hover {
+                     cursor: pointer;
+                     background: #FF844B;
+                }
+                 &.buy {
+                     background: #2DCC70;
+                     box-shadow: inset 0 0 0 3px #1AAF5D;
+                     &:hover {
+                         background: #1AAF5D;
+                    }
+                }
+            }
+        }
+         .popup {
+             position: absolute;
+             font-size: 0.6rem;
+             left: 0;
+             width: 100%;
+             padding: 25px;
+             bottom: 35px;
+             .content {
+                 background: white;
+                 border-top: 3px solid #FBA371;
+                 -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+                 -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+                 box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+                 p {
+                     color: black;
+                     font-weight: normal;
+                     margin-bottom: 5px;
+                     margin-top: 15px;
+                     display: block;
+                }
+                 &:before {
+                     border-left: 20px solid transparent;
+                     border-right: 20px solid transparent;
+                     border-bottom: 20px solid #FF844B;
+                     content: '';
+                     top: 8px;
+                     position: absolute;
+                     left: 43%;
+                }
+                 .action {
+                     display: flex;
+                     justify-content: space-between;
+                }
+                 .ok {
+                     padding: 10px 0;
+                     width: 50%;
+                     background: white;
+                     color: gray;
+                     &:hover {
+                         cursor: pointer;
+                         font-weight: bold;
+                         color: green;
+                         text-decoration: underline;
+                    }
+                }
+                 .no {
+                     width: 50%;
+                     padding: 10px 0;
+                     background: #FBA371;
+                     color: white;
+                     &:hover {
+                         cursor: pointer;
+                         background: #FF844B;
+                         font-weight: bold;
+                    }
+                }
+            }
+             &.popupBuy {
+                 .content {
+                     border-top: 3px solid #2DCC70;
+                     &:before {
+                         border-bottom: 20px solid #2DCC70;
+                    }
+                     .no {
+                         background: #2DCC70;
+                         &:hover {
+                             background: #1AAF5D;
+                        }
+                    }
+                }
+            }
+        }
+         .price-zone {
+             padding-top: 15px;
+             img {
+                 width: 15px;
+                 margin: 0 12px 0 0;
+                 vertical-align: baseline;
+            }
+             p {
+                 margin: 0;
+                 padding: 5px 20px;
+                 background-color: #e8f7f5;
+                 border-radius: 30px;
+                 font-size:0.5rem;
+                 display: inline-block;
+            }
+             .price:after {
+                 content: '';
+                 position: absolute;
+                 left: 46%;
+                 top: 47px;
+                 width: 0;
+                 height: 0;
+                 border-left: 10px solid transparent;
+                 border-right: 10px solid transparent;
+                 border-top: 10px solid #e8f7f5;
+                 clear: both;
+            }
+        }
+    }
+     .name {
+         font-size: 0.6rem;
+         font-weight:bold;
+         text-align: left;
+    }
+}
+ 

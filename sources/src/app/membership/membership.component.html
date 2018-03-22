@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-md-2 menu">
+		<ul class="nav">
+  			<li>
+		        <a class="active">Mes informations</a>
+	    	</li>
+		</ul>
+	</div>
+	<div class="col-md-10 global">	
+		<div class="titleZone row">
+			<div class="title col-md-3">Espace Personnel</div>
+			<div class="name col-md-9"><span><img src="./assets/images/picto_adresseur.png">{{userName}}</span></div>
+		</div>	
+		<div class="contentZone" >
+			<div *ngIf="member?.length > 0;else noItems">
+				<div class="title">Informations personnelles</div>
+				<div class="row" *ngFor="let item of member">
+					<ul class="collection col-md-4">
+						<li> <span>Nom</span><br />{{item.name}}</li>
+						<li> <span>Email</span><br />{{item.email}}</li>
+					</ul>
+					<ul class="collection col-md-4">
+						<li> <span>Pays</span><br />France</li>
+					</ul>
+					<ul class="title collection col-md-4">
+						Mes plantes :
+						<div *ngFor="let item of table;" class="row">
+							<p>{{item.name}}</p>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<ng-template #noItems>
+			<hr>
+			<h5>There are no items to list</h5>
+		</ng-template>
+	</div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+<div class="card-list">
+    Inventaire des plantes :
+    
+    <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+    <div *ngIf="items?.length > 0;else noItems">
+        <div class="menu">
+            <div class="pagination">
+            <div *ngIf=" pageID != 1">
+                <a routerLink="/market/{{pageID - 1 }}">◄</a>
+            </div>
+            <div *ngFor="let item of numberPages;let i = index" class="pagination">
+                <a routerLink="/market/{{i+1}}">{{i+1}}</a>
+            </div>
+            <a routerLink="/market/{{pageID + 1 }}" *ngIf=" pageID != countPages">►</a>
+        </div>
+            <p><span>Nombre de plantes :</span> {{numberUnicorns}}</p>
+            <p><span>Page actuel </span>{{pageID}}/{{numberPages.length}}</p>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+         
+        <div class="row container">
+
+            <div *ngFor="let item of listUnicorns;let i = index" class="collection col-md-3 ">
+
+                    <div class="unicorn-card-detail">
+
+                        <div class="price-zone">
+                            <p class="price">
+                                <img src="../assets/images/price.png">
+                                <b>Prix</b>
+                                = {{item.price}} BTC
+                            </p>
+                        </div>
+
+                        
+                        <img src="../assets/images/plante2.png">
+                        <p *ngIf="item.statut  == 'destroyed' ">Statut: détruit</p>
+
+                        <div class="flexZone">
+                            <div class="btns buy">
+                                <span (click)="openPopupBuy(item, i)">Acheter</span>
+                                <div class="popup popupBuy" *ngIf="popupBuy && i == itemToEdit"> 
+                                    <div class="content">
+                                        <p>Achetez cette plante</p>
+                                        <div class="action">
+                                            <div class="ok" (click)="buyUnicorn(item)">OUI</div>
+                                            <div class="no" (click)="closeAllPopups()">NON</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                
+                            <div class="btns destroy">
+                                <span (click)="openPopupDestroy(item, i)">Détruire</span>
+                                <div class="popup" *ngIf="popupDestroy && i == itemToEdit"> 
+                                    <div class="content">
+                                        <p>Détruire cette plante</p>
+                                        <div class="action">
+                                            <div class="ok" (click)="destroyUnicorn(item)">OUI</div>
+                                            <div class="no" (click)="closeAllPopups()">NON</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </div>
+                    </div>
+                    <p class="name">Plante : {{item.name}}</p>
+                </div>
+        </div>
+    </div>
+
+    <ng-template #noItems>
+        <hr>
+        <h5>There are no items to list</h5>
+    </ng-template>
+
+</div>
